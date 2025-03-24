@@ -8,19 +8,73 @@
 
 # Basic Site Settings
 locale                   : "en-US"
+site_theme               : "default"
 title                    : "Ayush Pandey"
 title_separator          : "-"
 name                     : &name "Ayush Pandey"
 description              : &description "PhD Student at Sorbonne University working with the DELYS team from Inria/CNRS"
-url                      : https://ayushpandey8439.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://ayushpandey8439.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ayushpandey8439/ayushpandey8439.github.io"
-teaser                   :  # filename of teaser fallback teaser image placed in /images/"
+
+# Site Author - The following control what appear as part of the author content on the side bar.
+#               If a field is blank the icon and link will not appear, otherwise it will be shown.
+#               Additional customization can be done by editing /_includes/author-profile.html
+author:
+  name             : "Ayush Pandey"
+  avatar           : "profile.jpeg"
+  bio              : "Distributed systems researcher"
+  location         :
+  employer         : "Sorbonne Université"
+  pubmed           :
+  googlescholar    :
+  email            : "ayushpandey8439@gmail.com"
+  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "ayushpandey8439"
+  google_plus      :
+  keybase          :
+  instagram        :
+  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  lastfm           :
+  linkedin         : "ayush-pandey-7711b6104"
+  orcid            : "https://orcid.org/0000-0001-8011-5411"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    :
+  steam            :
+  tumblr           :
+  twitter          : "_pandeyayush_"
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+  wikipedia        :
+
+
+
+# # Publication Category - The following the list of publication categories and their headings
+# publication_category:
+#   books:
+#     title: 'Books'
+#   manuscripts:
+#     title: 'Journal Articles'    
+#   conferences:
+#     title: 'Conference Papers'
+
+# Site Settings
+teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
-words_per_minute         : 80
-future                   : false
-read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -30,7 +84,7 @@ comments:
   facebook:
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          :  "dark" # "light" (default), "dark"
+    colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages" # "master", "gh-pages"
@@ -79,46 +133,7 @@ social:
 analytics:
   provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
-    tracking_id          : G-HBEBL98JQ9
-
-
-# Site Author
-author:
-  name             : "Ayush Pandey"
-  avatar           : "profile.jpeg"
-  bio              : "Distributed systems researcher"
-  location         :
-  employer         : "Sorbonne Université"
-  pubmed           :
-  googlescholar    :
-  email            : "ayushpandey8439@gmail.com"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : "ayushpandey8439"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         : "ayush-pandey-7711b6104"
-  orcid            : "https://orcid.org/0000-0001-8011-5411"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    :
-  steam            :
-  tumblr           :
-  twitter          : "_pandeyayush_"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
+    tracking_id          :
 
 
 # Reading Files
@@ -188,6 +203,9 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
   talks:
     output: true
     permalink: /:collection/:path/
@@ -241,6 +259,7 @@ defaults:
       share: true
 
 
+
 # Sass/SCSS
 sass:
   sass_dir: _sass
@@ -251,7 +270,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Europe/Paris # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
