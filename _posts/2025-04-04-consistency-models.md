@@ -163,5 +163,13 @@ Common Confusions
 
 ### Repeatable reads vs Snapshot isolation
 
+Repeatable reads is a restriction on the read set of a transaction. When reading, a transaction is free to arbitrarily choose a dependency to read from. Once chosen, a subsequent read should read from this dependency. 
+
+SI on the other hand is a restriction on the write set of a transaction. Two concurrent transactions with overlapping write sets cannot commit. One of them has to abort. 
 
 
+### Serializability and Linearizability
+
+Serializability dictates that transactions appear to have occurred in some total order. Since a transaction becomes visible at commit, the linearization point of this transaction is at commit. In-transaction operations become visible in session order and intra-transaction operations according to the commits. 
+
+Linearizability is non transactional. Since Linearizability is a single-object model, a transaction's writes to an object can be linearized before its commit. As such it may become visible before commit. In addition, Linearizability dictates that the linearization order of operations is consistent with their real-time order.
