@@ -10,7 +10,7 @@ tags:
   - Concurrency systems
 ---
 
-Consistency models are difficult to explain and even more difficult to understand. At the time of writing, there is about 40 consistency levels that I know of, each with its own set of assumptions and implications which in a lot of cases are only subtly different between different consistency levels. Adding to this complexity is the fact that different communities refer to different things with the same name. Take Snapshot Isolation(SI) for example. To a relational database practitioner, SI means concurrent snapshots that remain isolated from each other. It is not really a consistency level but rather the Isolation property in the ACID mode. But for a distributed systems practitioner, SI means something completely different. 
+Consistency models are difficult to explain and even more difficult to understand. At the time of writing, there is about 20 consistency levels that I know of, each with its own set of assumptions and implications which in a lot of cases are only subtly different between different consistency levels. Adding to this complexity is the fact that different communities refer to different things with the same name. Take Snapshot Isolation(SI) for example. To a relational database practitioner, SI means concurrent snapshots that remain isolated from each other. It is not really a consistency level but rather the Isolation property in the ACID mode. But for a distributed systems practitioner, SI means something completely different. 
 
 In an attempt to make these definitions clear for myself and hopefully for you, dear reader; I am writing this post. 
 It is mostly based on the definitions from the following sources. 
